@@ -18,6 +18,10 @@
 PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/lib/librilpos.so:system/lib/librilpos.so \
   vendor/htc/endeavoru/proprietary/lib/libhtc_ril.so:system/lib/libhtc_ril.so \
+  vendor/htc/endeavoru/proprietary/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
+  vendor/htc/endeavoru/proprietary/lib/libwvm.so:system/lib/libwvm.so \
+  vendor/htc/endeavoru/proprietary/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
+  vendor/htc/endeavoru/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
   vendor/htc/endeavoru/proprietary/etc/nfcee_access.xml:system/etc/nfcee_access.xml \
   vendor/htc/endeavoru/proprietary/lib/libpn544_fw.so:system/lib/libpn544_fw.so \
   vendor/htc/endeavoru/proprietary/usr/keylayout/tegra-kbc.kl:system/usr/keylayout/tegra-kbc.kl \
@@ -178,10 +182,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/lib/libnvasfparserhal.so:system/lib/libnvasfparserhal.so \
   vendor/htc/endeavoru/proprietary/lib/libnvaviparserhal.so:system/lib/libnvaviparserhal.so \
   vendor/htc/endeavoru/proprietary/lib/libnvavp.so:system/lib/libnvavp.so \
-  vendor/htc/endeavoru/proprietary/lib/libWVStreamControlAPI_L1.so:system/lib/libWVStreamControlAPI_L1.so \
-  vendor/htc/endeavoru/proprietary/lib/libwvm.so:system/lib/libwvm.so \
-  vendor/htc/endeavoru/proprietary/lib/libwvdrm_L1.so:system/lib/libwvdrm_L1.so \
-  vendor/htc/endeavoru/proprietary/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
   vendor/htc/endeavoru/proprietary/etc/soundimage/CodecDSPID.txt:system/etc/soundimage/CodecDSPID.txt \
   vendor/htc/endeavoru/proprietary/etc/soundimage/CodecDSPID_XC.txt:system/etc/soundimage/CodecDSPID_XC.txt \
   vendor/htc/endeavoru/proprietary/etc/soundimage/Sound_BT_CarMode.txt:system/etc/soundimage/Sound_BT_CarMode.txt \
@@ -230,8 +230,6 @@ PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/lib/libasound.so:system/lib/libasound.so \
   vendor/htc/endeavoru/proprietary/lib/libsrsprocessing.so:system/lib/libsrsprocessing.so \
   vendor/htc/endeavoru/proprietary/lib/libsrscorehtc.so:system/lib/libsrscorehtc.so \
-  vendor/htc/endeavoru/proprietary/bin/snd3008:system/bin/snd3008 \
-  vendor/htc/endeavoru/proprietary/bin/alsa_amixer:system/bin/alsa_amixer \
   vendor/htc/endeavoru/proprietary/lib/libmllite.so:system/lib/libmllite.so \
   vendor/htc/endeavoru/proprietary/lib/libmlplatform.so:system/lib/libmlplatform.so \
   vendor/htc/endeavoru/proprietary/lib/libmpl.so:system/lib/libmpl.so \
