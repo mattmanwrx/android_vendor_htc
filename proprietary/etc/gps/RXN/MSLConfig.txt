@@ -32,7 +32,7 @@
 // -----------------------
 
 // Config File Version. Value is string.
-Config_File_Ver: 1.9.0
+Config_File_Ver: 1.10.0
 
 // Reference GPS Week used to determine GPS week roll over (%1024)
 Base_GPS_Week: 570
@@ -92,7 +92,7 @@ MSL_Log_Path: /data/RXN/MSL_Log.txt
 // CL_Config_Str: ./RINEX_OUT.txt|w+
 // CL_Config_Str: ServerIP:192.168.63.112|MsBased:1|S:04|Z:0xFFFF
 // CL_Config_Str: ServerIP:127.0.0.1|MsBased:1|SkipStart:1|S:04|Z:0xFFFF
-CL_Config_Str: ServerIP:127.0.0.1|MsBased:1|SkipStart:1|S:04|Z:0xFFFF|UpdateBCE:0|RegGPSTime:1
+CL_Config_Str: ServerIP:127.0.0.1|MsBased:1|SkipStart:1|S:04|Z:0xFFFF|UpdateBCE:0|RegGPSTime:1|useUNIX:1
 
 // Pantry file path. Path to the PGPS local data store.
 // The following folders will be created under it: pred and eph 
@@ -114,6 +114,11 @@ TOE_Chip_Exp: 7200
 // Value in meters. Min value: 20. Max Value: 200. Default value: 100.
 URE_Threshold: 100
 
+// EE supplied by the MSL (using the RXN_MSL_GetAssistance function) must have a FT value at
+// or below this threshold. If EE has FT above this threshold for any PRN/SV, no assistance
+// data will be provided for that PRN/SV.
+// Value in meters. Min value: 20. Max Value: 200. Default value: 100.
+FT_Threshold: 100
 // How frequently to check the seed for required clock or seed updates.
 // Value in sec. Min value: 60. Max value: 3600. Default 600.
 System_Check_Freq: 3600
@@ -165,6 +170,11 @@ SNTP_Port: 123
 // Time to wait during start up before making seed or SNTP request.
 // Value in sec. Min value: 0 Max value: 604800. Default value: 10.
 Startup_Data_Wait_Duration: 10
+// Rx Networks does not recommend using device system time as a source of time.
+// If there are not other available options for a time source, then this parameter
+// will enable to use of system time as a source of time.
+// Set to 1 to enable use of system time, 0 to never use system time.
+Use_System_Time: 0
 
 // Maximum allowable uncertainty for GPS clock for seed requests.
 // Value in sec. Min value: 0. Max value: 7200. Default Value: 120.
@@ -255,3 +265,28 @@ GLO_Clock_Update_Age: 345600
 // Value in sec. Min value: 0. Max value: Max value: 86400. Default 7200
 GLO_Clock_Update_Age_Offset: 7200
 
+// Enable En to be written in extended ephemeris.  En is the number of days since the sv received
+// updated ephemeris from the control segment.  For artificially produced EE, En is set to the seed 
+// age in days.  However, while it is possible to get good results from EE that is several days old, 
+// some chipsets may discard this assistance because BCE of this age would have no value.  Because 
+// of this, En is set to 0 by default.
+// Set to 1 to enable En to be provided in assistance.  Set to 0 to always set En to 0.
+GLO_Enable_En: 0
+// GLONASS time is bounded to 15 minute intervals.  The MSL by default allows assistance to be
+// requested for any time, whether that time is a valid GLONASS time or not.  Use this flag to
+// force assistance to be requested for the nearest 15 minute period.
+// Set to 1 to use bounded GLONASS time.  Set to 0 to use continuous time (Default).
+GLO_Use_Bounded_Time: 0
+// XYBRID Host Format Field. Specifies the format of the XYBRID DNS entries. The '%' char within this
+// field will be replaced by 1 - N where 'N' is specified as the Xybrid_Max_Host_Idx (see below).
+// Default "xybrid%.gpstream.net" supporting access to xybrid1.gpstream.net and xybrid2.gpstream.net
+// (assuming Xybrid_Max_Host_Idx = 2).
+Xybrid_Host: xybrid%.gpstream.net
+// Max index for the DNS entry specfied within the "XYBRID_Host". See XYBRID_Host comments for details.
+// Default value: 2.
+Xybrid_Max_Host_Idx: 2
+// XYBRID Host Port. Port used for XYBRID server. Default value: 9380.
+Xybrid_Port: 9380
+// XYBRID Vendor ID.  The vendor ID used to authenticate to the XYBRID server.  Rx Networks will provide 
+// a XYBRID Vendor ID to each customer.  Default value: evaluation
+Xybrid_VendorID: evaluation
