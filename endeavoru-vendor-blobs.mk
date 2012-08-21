@@ -242,4 +242,5 @@ PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/lib/hw/gps.tegra.so:system/lib/hw/gps.tegra.so \
   vendor/htc/endeavoru/proprietary/lib/hw/hwcomposer.tegra.so:system/lib/hw/hwcomposer.tegra.so \
   vendor/htc/endeavoru/proprietary/lib/hw/nfc.endeavoru.so:system/lib/hw/nfc.endeavoru.so \
-  vendor/htc/endeavoru/proprietary/lib/hw/sensors.endeavoru.so:system/lib/hw/sensors.endeavoru.so
+  vendor/htc/endeavoru/proprietary/lib/hw/sensors.endeavoru.so:system/lib/hw/sensors.endeavoru.so \
+  vendor/htc/endeavoru/proprietary/app/PGPSDownloader.apk:system/app/PGPSDownloader.apk
