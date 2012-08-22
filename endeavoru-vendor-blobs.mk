@@ -43,6 +43,7 @@ PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/bin/cplc_main:system/bin/cplc_main \
   vendor/htc/endeavoru/proprietary/bin/GPSCConfigFile.cfg:system/bin/GPSCConfigFile.cfg \
   vendor/htc/endeavoru/proprietary/bin/pathconfigfile.txt:system/bin/pathconfigfile.txt \
+  vendor/htc/endeavoru/proprietary/bin/patch-X.0.ce:system/bin/patch-X.0.ce \
   vendor/htc/endeavoru/proprietary/bin/uim-sysfs:system/bin/uim-sysfs \
   vendor/htc/endeavoru/proprietary/etc/firmware/TIInit_10.4.27.bts:system/etc/firmware/TIInit_10.4.27.bts \
   vendor/htc/endeavoru/proprietary/etc/firmware/TIInit_10.5.20.bts:system/etc/firmware/TIInit_10.5.20.bts \
