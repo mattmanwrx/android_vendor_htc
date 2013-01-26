@@ -216,12 +216,8 @@ PRODUCT_COPY_FILES += \
   vendor/htc/endeavoru/proprietary/etc/soundimage/srsfx_trumedia_music.cfg:system/etc/soundimage/srsfx_trumedia_music.cfg \
   vendor/htc/endeavoru/proprietary/etc/soundimage/srsfx_trumedia_voice.cfg:system/etc/soundimage/srsfx_trumedia_voice.cfg \
   vendor/htc/endeavoru/proprietary/bin/htcbatt:system/bin/htcbatt \
-  vendor/htc/endeavoru/proprietary/lib/libnvcontrol_jni.so:system/lib/libnvcontrol_jni.so \
-  vendor/htc/endeavoru/proprietary/lib/libnvcpud.so:system/lib/libnvcpud.so \
-  vendor/htc/endeavoru/proprietary/lib/libnvcpud_client.so:system/lib/libnvcpud_client.so \
   vendor/htc/endeavoru/proprietary/lib/libsurfaceflinger_client.so:system/lib/libsurfaceflinger_client.so \
   vendor/htc/endeavoru/proprietary/lib/libhtc_dis.so:system/lib/libhtc_dis.so \
-  vendor/htc/endeavoru/proprietary/lib/libhtc-opt2.so:system/lib/libhtc-opt2.so \
   vendor/htc/endeavoru/proprietary/lib/libhtcsunny2engine.so:system/lib/libhtcsunny2engine.so \
   vendor/htc/endeavoru/proprietary/lib/libhtcsunnyengine.so:system/lib/libhtcsunnyengine.so \
   vendor/htc/endeavoru/proprietary/lib/libhtcsurfaces.so:system/lib/libhtcsurfaces.so \
